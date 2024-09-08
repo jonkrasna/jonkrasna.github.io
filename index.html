@@ -22,35 +22,41 @@
         <meta name="twitter:description" content="Jon Krasna's website.">
 
         <style>
+        body {
+            line-height: 1.4;
+            font-size: 19px;
+            margin: 0;
+            padding: 0;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        #maincontent {
+            max-width: 650px;
+            margin: 50px 50px;
+            padding: 0 10px;
+        }
+        a {
+            color: #444;
+        }
+        a:hover {
+            color: #999;
+        }
+        @media (prefers-color-scheme: dark) {
             body {
-                line-height: 1.4;
-                font-size: 18px;
-                padding: 0 5vmin;
-                margin: 50px auto;
-                max-width: 650px;
+                background-color: #000;
+                color: #fff;
             }
             a {
-                color: #444;
+                color: #bbb;
             }
             a:hover {
-                color: #999;
+                color: #ddd;
             }
-            @media (prefers-color-scheme: dark) {
-                body {
-                    background-color: #000;
-                    color: #fff;
-                }
-                a {
-                    color: #bbb;
-                }
-                a:hover {
-                    color: #ddd;
-                }
-            }
+        }
+        @media (max-width: 600px) {
             #maincontent {
-                max-width: 42em;
-                margin: 15 auto;
+                margin: 30px 15px;
             }
+        }
         </style>
     </head>
 
