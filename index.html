@@ -1,74 +1,115 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <link rel="icon" type="image/png" href="assets/favicon.png">
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/x-icon" href="favicon.ico" />
         <title>Jon Krasna</title>
-        <meta name="description" content="Personal website of Jon Krasna, featuring links to social media profiles and contact information.">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta
+            name="description"
+            content="Personal website of Jon Krasna, featuring links to social media profiles and contact information."
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <!-- Open Graph Meta Tags -->
-        <meta property="og:url" content="https://jonkrasna.github.io">
-        <meta property="og:type" content="website">
-        <meta property="og:title" content="Jon Krasna">
-        <meta property="og:description" content="Jon Krasna's website.">
+        <meta property="og:url" content="https://jonkrasna.github.io" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Jon Krasna" />
+        <meta property="og:description" content="Jon Krasna's website." />
 
         <!-- Twitter Meta Tags -->
-        <meta name="twitter:card" content="summary">
-        <meta name="twitter:site" content="@jonkrasna">
-        <meta property="twitter:domain" content="jonkrasna.github.io">
-        <meta property="twitter:url" content="https://jonkrasna.github.io">
-        <meta name="twitter:title" content="Jon Krasna">
-        <meta name="twitter:description" content="Jon Krasna's website.">
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@jonkrasna" />
+        <meta property="twitter:domain" content="jonkrasna.github.io" />
+        <meta property="twitter:url" content="https://jonkrasna.github.io" />
+        <meta name="twitter:title" content="Jon Krasna" />
+        <meta name="twitter:description" content="Jon Krasna's website." />
 
         <style>
-        body {
-            line-height: 1.4;
-            font-size: 19px;
-            margin: 0;
-            padding: 0;
-            font-family: 'Times New Roman', Times, serif;
-        }
-        #maincontent {
-            max-width: 650px;
-            margin: 50px 50px;
-            padding: 0 10px;
-        }
-        a {
-            color: #444;
-        }
-        a:hover {
-            color: #999;
-        }
-        @media (prefers-color-scheme: dark) {
             body {
-                background-color: #000;
-                color: #fff;
+                line-height: 1.4;
+                font-size: 19px;
+                margin: 0;
+                padding: 0;
+                font-family: "Times New Roman", Times, serif;
+            }
+            #maincontent {
+                max-width: 650px;
+                margin: 50px 50px;
+                padding: 0 10px;
             }
             a {
-                color: #bbb;
+                color: #000;
+                position: relative;
+                display: inline-block;
+                text-decoration: none;
             }
-            a:hover {
-                color: #ddd;
+            a::before {
+                content: attr(data-text);
             }
-        }
-        @media (max-width: 600px) {
-            #maincontent {
-                margin: 30px 15px;
+            a::after {
+                content: "●";
+                position: absolute;
+                left: 100%;
+                margin-left: 10px;
+                opacity: 0;
+                pointer-events: none;
             }
-        }
+            a:hover::after {
+                opacity: 1;
+            }
+            a:active {
+                color: #f05a24;
+            }
+            @media (prefers-color-scheme: dark) {
+                body {
+                    background-color: #000;
+                    color: #fff;
+                }
+                a {
+                    color: #fff;
+                }
+            }
+            @media (max-width: 768px) {
+                #maincontent {
+                    margin: 30px 15px;
+                }
+                a::after {
+                    content: none;
+                }
+            }
         </style>
     </head>
 
     <body>
         <div id="maincontent">
-            <p>Jon Krasna</p>
-            <a href="https://x.com/jonkrasna" target="_blank">X</a><br />
-            <a href="https://jonkrasna.substack.com" target="_blank">Substack</a><br />
-            <a href="https://github.com/jonkrasna" target="_blank">GitHub</a><br />
-            <a href="https://huggingface.com/jonkrasna" target="_blank">Hugging Face</a><br />
-            <a href="https://discordapp.com/users/jonkrasna" target="_blank">Discord</a><br />
-            <a href="mailto:jonkrasna@gmail.com">Email</a><br />
+            <p style="margin-bottom: 50px">Jon Krasna</p>
+            <a href="https://x.com/jonkrasna" target="_blank" data-text="X"></a
+            ><br />
+            <a
+                href="https://jonkrasna.substack.com"
+                target="_blank"
+                data-text="Substack"
+            ></a
+            ><br />
+            <a
+                href="https://github.com/jonkrasna"
+                target="_blank"
+                data-text="GitHub"
+            ></a
+            ><br />
+            <a
+                href="https://huggingface.com/jonkrasna"
+                target="_blank"
+                data-text="Hugging Face"
+            ></a
+            ><br />
+            <a
+                href="https://discordapp.com/users/jonkrasna"
+                target="_blank"
+                data-text="Discord"
+            ></a
+            ><br />
+            <a href="mailto:jonkrasna@gmail.com" data-text="Email"></a><br />
         </div>
     </body>
 </html>
