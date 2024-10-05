@@ -2,7 +2,8 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <link rel="icon" type="image/x-icon" href="favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <meta name="author" content="Jon Krasna">
         <title>Jon Krasna</title>
         <meta
             name="description"
@@ -11,7 +12,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <!-- Open Graph Meta Tags -->
-        <meta property="og:url" content="https://jonkrasna.github.io" />
+        <meta property="og:url" content="https://jonkrasna.com" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Jon Krasna" />
         <meta property="og:description" content="Jon Krasna's website." />
@@ -19,23 +20,30 @@
         <!-- Twitter Meta Tags -->
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@jonkrasna" />
-        <meta property="twitter:domain" content="jonkrasna.github.io" />
-        <meta property="twitter:url" content="https://jonkrasna.github.io" />
+        <meta property="twitter:domain" content="jonkrasna.com" />
+        <meta property="twitter:url" content="https://jonkrasna.com" />
         <meta name="twitter:title" content="Jon Krasna" />
         <meta name="twitter:description" content="Jon Krasna's website." />
 
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap">
+
         <style>
             body {
-                line-height: 1.4;
-                font-size: 19px;
+                line-height: 1.5em;
+                font-size: 14px;
                 margin: 0;
                 padding: 0;
-                font-family: "Times New Roman", Times, serif;
+                font-family: "IBM Plex Mono", monospace;
             }
             #maincontent {
                 max-width: 650px;
                 margin: 50px 50px;
                 padding: 0 10px;
+            }
+            h1 {
+                font: inherit;
+                text-transform: uppercase;
+                margin-bottom: 50px;
             }
             a {
                 color: #000;
@@ -51,6 +59,7 @@
                 position: absolute;
                 left: 100%;
                 margin-left: 10px;
+                margin-top: -1px;
                 opacity: 0;
                 pointer-events: none;
             }
@@ -79,39 +88,21 @@
                 a::after {
                     content: none;
                 }
+                body {
+                    font-size: 16px;
+                };
             }
         </style>
     </head>
 
     <body>
         <div id="maincontent">
-            <p style="margin-bottom: 50px">Jon Krasna</p>
-            <a href="https://x.com/jonkrasna" target="_blank" data-text="X"></a
-            ><br />
-            <a
-                href="https://jonkrasna.substack.com"
-                target="_blank"
-                data-text="Substack"
-            ></a
-            ><br />
-            <a
-                href="https://github.com/jonkrasna"
-                target="_blank"
-                data-text="GitHub"
-            ></a
-            ><br />
-            <a
-                href="https://huggingface.com/jonkrasna"
-                target="_blank"
-                data-text="Hugging Face"
-            ></a
-            ><br />
-            <a
-                href="https://discordapp.com/users/jonkrasna"
-                target="_blank"
-                data-text="Discord"
-            ></a
-            ><br />
+            <h1>Jon Krasna</h1>
+            <a href="https://x.com/jonkrasna" target="_blank" rel="noopener" data-text="X"></a><br />
+            <a href="https://jonkrasna.substack.com" target="_blank" rel="noopener" data-text="Substack"></a><br />
+            <a href="https://github.com/jonkrasna" target="_blank" rel="noopener" data-text="GitHub"></a><br />
+            <a href="https://huggingface.com/jonkrasna" target="_blank" rel="noopener" data-text="Hugging Face"></a><br />
+            <a href="https://discordapp.com/users/jonkrasna" target="_blank" rel="noopener" data-text="Discord"></a><br />
             <a href="mailto:jonkrasna@gmail.com" data-text="Email"></a><br />
         </div>
     </body>
