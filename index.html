@@ -29,11 +29,11 @@
 
         <style>
             body {
-                line-height: 1.5em;
+                line-height: 1.6em;
                 font-size: 14px;
                 margin: 0;
                 padding: 0;
-                font-family: "IBM Plex Mono", monospace;
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
             }
             #maincontent {
                 max-width: 650px;
@@ -47,28 +47,12 @@
             }
             a {
                 color: #000;
-                position: relative;
-                display: inline-block;
                 text-decoration: none;
             }
-            a::before {
-                content: attr(data-text);
+            a:hover {
+                text-decoration: underline;
             }
-            a::after {
-                content: "●";
-                position: absolute;
-                left: 100%;
-                margin-left: 10px;
-                margin-top: -1px;
-                opacity: 0;
-                pointer-events: none;
-            }
-            a:hover::after {
-                opacity: 1;
-            }
-            a:active {
-                color: #9f9ea1;
-            }
+
             @media (prefers-color-scheme: dark) {
                 body {
                     background-color: #000;
@@ -98,12 +82,12 @@
     <body>
         <div id="maincontent">
             <h1>Jon Krasna</h1>
-            <a href="https://x.com/jonkrasna" target="_blank" rel="noopener" data-text="X"></a><br />
-            <a href="https://jonkrasna.substack.com" target="_blank" rel="noopener" data-text="Substack"></a><br />
-            <a href="https://github.com/jonkrasna" target="_blank" rel="noopener" data-text="GitHub"></a><br />
-            <a href="https://huggingface.com/jonkrasna" target="_blank" rel="noopener" data-text="Hugging Face"></a><br />
-            <a href="https://discordapp.com/users/jonkrasna" target="_blank" rel="noopener" data-text="Discord"></a><br />
-            <a href="mailto:jonkrasna@gmail.com" data-text="Email"></a><br />
+            <a href="https://x.com/jonkrasna" target="_blank" rel="noopener">X</a><br />
+            <a href="https://jonkrasna.substack.com" target="_blank" rel="noopener">Substack</a><br />
+            <a href="https://github.com/jonkrasna" target="_blank" rel="noopener">Github</a><br />
+            <a href="https://huggingface.com/jonkrasna" target="_blank" rel="noopener">Hugging Face</a><br />
+            <a href="https://discordapp.com/users/jonkrasna" target="_blank" rel="noopener">Discord</a><br />
+            <a href="mailto:jonkrasna@gmail.com">Email</a><br />
         </div>
     </body>
 </html>
